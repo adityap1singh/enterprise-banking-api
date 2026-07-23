@@ -15,5 +15,14 @@ jobs:
    - name: checkout code
      uses: actions/checkout@v4
 
+   - name: Print Current Directory
+     run: pwd
+
+   - name: List Files
+     run: ls -la
+
+   - name: Print Workspace
+     run: echo $GITHUB_WORKSPACE
+
    - name: print Welcome Aditya
      run: echo "Welcome to GitHub Actions World"
