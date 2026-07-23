@@ -68,6 +68,16 @@ jobs:
         with: 
             terraform_version: 1.12.2
 
+      - name: Terraform INIT
+        run: terraform init
+        working-directory: .\Terraform
+
+      - name: Terraform FMT
+        run: terraform fmt
+
+      - name: Terraform Validate
+        run: terraform validate
+
           
 
 
