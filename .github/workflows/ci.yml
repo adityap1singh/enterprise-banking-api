@@ -60,7 +60,7 @@ jobs:
       - name: Java installation
         uses: actions/setup-java@v5
         with:
-            distribution: turmulin
+            distribution: temurin
             java-version: '17'
 
       - name: Terraform Installation
