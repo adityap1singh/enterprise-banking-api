@@ -92,9 +92,9 @@ jobs:
         working-directory: ./Terraform/Parent_module/dev
 
       - name: checkovs scan
-        uses: bridgeview/checkovs-action@v3
+        uses: bridgecrewio/checkov-action@master
         with: 
-            working-directory: ./Terraform/ 
+            directory: ./Terraform/ 
 
       - name: Artifact upload
         uses: actions/upload-artifact@v4
