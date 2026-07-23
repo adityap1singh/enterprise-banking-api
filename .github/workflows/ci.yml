@@ -16,4 +16,4 @@ jobs:
      uses: actions/checkout@v4
 
    - name: print Welcome Aditya
-     run: echo "Welcome Aditya to GitHub Actions World"
+     run: echo "Welcome to GitHub Actions World"
