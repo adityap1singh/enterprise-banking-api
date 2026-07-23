@@ -74,9 +74,11 @@ jobs:
 
       - name: Terraform FMT
         run: terraform fmt
+        working-directory: .\Terraform
 
       - name: Terraform Validate
         run: terraform validate
+        working-directory: .\Terraform
 
           
 
