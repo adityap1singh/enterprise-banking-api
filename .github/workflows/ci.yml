@@ -21,6 +21,9 @@ jobs:
         distribution: temurin
         java-version: '17'
 
+   - name: Sonarqube scan
+     run: echo sonarsource/sonarqube-scan@v5
+
    - name: Print Current Directory
      run: pwd
 
