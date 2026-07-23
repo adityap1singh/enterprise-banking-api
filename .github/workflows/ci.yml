@@ -70,15 +70,19 @@ jobs:
 
       - name: Terraform INIT
         run: terraform init
-        working-directory: .\Terraform
+        working-directory: ./Terraform/Parent_module
 
       - name: Terraform FMT
         run: terraform fmt
-        working-directory: .\Terraform
+        working-directory: ./Terraform/Parent_module
 
       - name: Terraform Validate
         run: terraform validate
-        working-directory: .\Terraform
+        working-directory: ./Terraform/Parent_module
+
+      - name: Terraform plan
+        run: terraform plan
+        working-directory: ./Terraform/Parent_module
 
           
 
