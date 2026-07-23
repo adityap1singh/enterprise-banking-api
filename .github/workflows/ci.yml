@@ -48,4 +48,27 @@ jobs:
         image-ref: 'banking-api:1.0'
         severity: HIGH,CRITICAL
 
+  Infrastructure-validation:
+    needs: container-validation
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: chekout code
+        uses: actions/checkout@v4
+
+      - name: Java installation
+        uses: actions/setup-java@v5
+        with:
+            distribution: turmulin
+            java-version: '17'
+
+      - name: Terraform Installation
+        uses: hashicorp/install-terraform@v3
+        with: 
+            terraform_version: 1.12.2
+
+          
+
+
 
