@@ -1,0 +1,16 @@
+name: Banking API CI pipeline
+
+on:
+  push:
+  branches:
+    -main
+
+
+jobs:
+  first-jobs:
+  runs-on: ubuntu-latest
+
+  steps: 
+
+    - name: Print welcome aditya
+      run: eco welcome aditya to github world
