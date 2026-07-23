@@ -24,14 +24,22 @@ jobs:
    - name: Sonarqube scan
      run: echo sonarsource/sonarqube-scan@v5
 
-   - name: Print Current Directory
-     run: pwd
+  container-validation:
+    needs: build-and-test
+    runs-on: ubuntu-latest
 
-   - name: List Files
-     run: ls -la
+    steps:
 
-   - name: Print Workspace
-     run: echo $GITHUB_WORKSPACE
+    - name: checkout code
+      uses: actions/checkout@v4
 
-   - name: print Welcome Aditya
-     run: echo "Welcome to GitHub Actions World"
+    - name: Java stepup
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '17'
+
+    - name: Docker build
+      run: docker build -t banking-api:1.0 .
+
+
