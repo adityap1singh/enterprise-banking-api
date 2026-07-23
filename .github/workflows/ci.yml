@@ -42,4 +42,10 @@ jobs:
     - name: Docker build
       run: docker build -t banking-api:1.0 .
 
+    - name: Trivy scan
+      uses: aquasecurity/trivy-action@0.36.0
+      with: 
+        image-ref: 'banking-api:1.0'
+        severity: HIGH,CRITICAL
+
 
